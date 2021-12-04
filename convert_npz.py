@@ -39,10 +39,17 @@ if __name__ == "__main__":
     # dataset path
     imgpath = args.datadir+'/Images/'
     maskpath = args.datadir+'/Masks/'
-    # load dataset
+
     [src_images, tar_images] = convert_npz(imgpath,maskpath,size=(args.input_dim,args.input_dim),crops=args.n_crops,n_images=args.n_images)
     print('Loaded: ', src_images.shape, tar_images.shape)
+    
+    
+    # labels
+    a = np.zeros((350,1))
+    b = np.ones((500, 1))
+    labels = np.vstack((a,b))
+    
     # save as compressed numpy array
     filename = args.outfile_name+'.npz'
-    savez_compressed(filename, src_images, tar_images)
+    savez_compressed(filename, src_images, tar_images. labels)
     print('Saved dataset: ', filename)
