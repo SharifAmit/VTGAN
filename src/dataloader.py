@@ -6,12 +6,12 @@ import tensorflow as tf
 def load_real_data(filename):
 
     data = load(filename)
-    X1, X2 = data['arr_0'], data['arr_1']
+    X1, X2, y = data['arr_0'], data['arr_1'], data['arr_2']
 
     # normalize from [0,255] to [-1,1]
     X1 = (X1 - 127.5) / 127.5
     X2 = (X2 - 127.5) / 127.5
-    return [X1, X2]
+    return [X1, X2, y]
 
 def generate_real_data(data, random_samples, patch_shape):#
 
