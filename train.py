@@ -28,7 +28,7 @@ def train(d_model1, d_model2,g_global_model, g_local_model, gan_model, dataset, 
     g_global_percp_hist, g_local_percp_hist, g_global_recon_hist, g_local_recon_hist =list(),list(), list(), list()
     evf = np.ones((n_batch,64,256))
     # manually enumerate epochs
-    b = 92
+    b = 0
     start_time = time.time()
     for k in range(n_epochs):
         for i in range(bat_per_epo):
