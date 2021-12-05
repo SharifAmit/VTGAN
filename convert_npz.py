@@ -4,6 +4,7 @@ import numpy as np
 from numpy import asarray,savez_compressed
 from keras.preprocessing.image import img_to_array
 from keras.preprocessing.image import load_img
+from keras.utils import to_categorical
 import argparse
 
 def convert_npz(imgpath,maskpath, size=(512,512),crops=50,n_images=17):
@@ -48,7 +49,7 @@ if __name__ == "__main__":
     a = np.zeros((350,1))
     b = np.ones((500, 1))
     labels = np.vstack((a,b))
-    
+    labels = to_categorical(labels)
     # save as compressed numpy array
     filename = args.outfile_name+'.npz'
     savez_compressed(filename, src_images, tar_images. labels)
