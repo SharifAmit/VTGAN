@@ -1,5 +1,5 @@
 import tensorflow as tf
-from tensorflow.keras.layers import Layer, InputSpec, Reshape, Activation, Conv2D, Conv2DTranspose, SeparableConv2D, Dropout, GlobalAveragePooling2D
+from tensorflow.keras.layers import Layer, InputSpec, Reshape, Activation, Conv2D, Conv2DTranspose, SeparableConv2D, Dropout, GlobalAveragePooling2D, Dense
 from tensorflow.keras.layers import Input, Add, Concatenate, Lambda,LeakyReLU,AveragePooling2D, BatchNormalization, LayerNormalization,Add, MultiHeadAttention, Flatten
 from tensorflow.keras import layers
 from tensorflow.keras.optimizers import Adam
