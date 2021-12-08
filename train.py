@@ -1,6 +1,6 @@
 from src.model import coarse_generator,fine_generator,vtgan,vit_discriminator
 from src.visualization import summarize_performance, summarize_performance_global, plot_history, to_csv
-from src.data_loader import resize, generate_fake_data_coarse, generate_fake_data_fine, generate_real_data, load_real_data
+from src.dataloader import resize, generate_fake_data_coarse, generate_fake_data_fine, generate_real_data, load_real_data
 import argparse
 import time
 from numpy import load
@@ -193,10 +193,10 @@ if __name__ == "__main__":
     patch_size_fine= args.n_patch
     patch_size_coarse= patch_size_fine//2
     # define discriminator models
-    d_model1 = vit_discriminator(image_shape_fine,label_shape_fine, image_size = 512,projection_dim=64, patch_size_fine,
+    d_model1 = vit_discriminator(image_shape_fine,label_shape_fine, image_size = 512,projection_dim=64, patch_size=patch_size_fine,
                                  transformer_layers = 4, num_heads = 4, mlp_head_units = [128,64], activation='tanh', name='VT_fine')
 
-    d_model2 = vit_discriminator(image_shape_coarse,label_shape_coarse, image_size = 256, projection_dim=64, patch_size_coarse,
+    d_model2 = vit_discriminator(image_shape_coarse,label_shape_coarse, image_size = 256, projection_dim=64, patch_size=patch_size_coarse,
                                  transformer_layers = 4, num_heads = 4, mlp_head_units = [128,64], activation='tanh', name='VT_coarse') 
     
     # define generator models
