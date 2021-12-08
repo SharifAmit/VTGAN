@@ -3,6 +3,7 @@ from src.visualization import summarize_performance, summarize_performance_globa
 from src.dataloader import resize, generate_fake_data_coarse, generate_fake_data_fine, generate_real_data, load_real_data
 import argparse
 import time
+import numpy as np
 from numpy import load
 import gc
 import keras.backend as K
