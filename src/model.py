@@ -1,9 +1,9 @@
 import tensorflow as tf
-from keras.layers import Layer, InputSpec, Reshape, Activation, Conv2D, Conv2DTranspose, SeparableConv2D, Dropout
-from keras.layers import Input, Add, Concatenate, Lambda,LeakyReLU,AveragePooling2D, BatchNormalizationm, LayerNormalization,Add, MultiHeadAttention, Flatten
-from keras.optimizers import Adam
-from keras.models import Model
-from keras.initializers import RandomNormal
+from tensorflow.keras.layers import Layer, InputSpec, Reshape, Activation, Conv2D, Conv2DTranspose, SeparableConv2D, Dropout
+from tensorflow.keras.layers import Input, Add, Concatenate, Lambda,LeakyReLU,AveragePooling2D, BatchNormalization, LayerNormalization,Add, MultiHeadAttention, Flatten
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import Model
+from tensorflow.keras.initializers import RandomNormal
 from src.losses import *
 
 
