@@ -1,5 +1,3 @@
-
-
 import numpy as np
 from numpy import asarray,savez_compressed
 from keras.preprocessing.image import img_to_array
