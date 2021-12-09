@@ -1,6 +1,8 @@
 from src.model import coarse_generator,fine_generator,vtgan,vit_discriminator
 from src.visualization import summarize_performance, summarize_performance_global, plot_history, to_csv
 from src.dataloader import resize, generate_fake_data_coarse, generate_fake_data_fine, generate_real_data, load_real_data
+import tensorflow as tf
+tf.config.run_functions_eagerly(True)
 import argparse
 import time
 import numpy as np
