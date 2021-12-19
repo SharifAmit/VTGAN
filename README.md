@@ -11,20 +11,27 @@ This code is for our paper "VTGAN: Semi-supervised Retinal Image Synthesis and D
 ```
 https://arxiv.org/abs/2104.06757
 ```
-### IEEE/CVF ICCV 2021
+### CVF ICCVW 2021
 ```
 https://openaccess.thecvf.com/content/ICCV2021W/CVAMD/html/Kamran_VTGAN_Semi-Supervised_Retinal_Image_Synthesis_and_Disease_Prediction_Using_Vision_ICCVW_2021_paper.html
 ```
+### IEE Xplore ICCVW 2021
+```
+https://ieeexplore.ieee.org/document/9607858
+```
 # Citation 
 ```
-@InProceedings{Kamran_2021_ICCV,
-    author    = {Kamran, Sharif Amit and Hossain, Khondker Fariha and Tavakkoli, Alireza and Zuckerbrod, Stewart Lee and Baker, Salah A.},
-    title     = {VTGAN: Semi-Supervised Retinal Image Synthesis and Disease Prediction Using Vision Transformers},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops},
-    month     = {October},
-    year      = {2021},
-    pages     = {3235-3245}
+@INPROCEEDINGS{9607858,
+  author={Kamran, Sharif Amit and Hossain, Khondker Fariha and Tavakkoli, Alireza and Zuckerbrod, Stewart Lee and Baker, Salah A.},
+  booktitle={2021 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)}, 
+  title={VTGAN: Semi-supervised Retinal Image Synthesis and Disease Prediction using Vision Transformers}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={3228-3238},
+  doi={10.1109/ICCVW54120.2021.00362}
 }
+
 
 ```
 
