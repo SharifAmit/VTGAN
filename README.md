@@ -31,8 +31,6 @@ https://ieeexplore.ieee.org/document/9607858
   pages={3228-3238},
   doi={10.1109/ICCVW54120.2021.00362}
 }
-
-
 ```
 
 ## Pre-requisite
