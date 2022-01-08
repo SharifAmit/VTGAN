@@ -218,7 +218,7 @@ if __name__ == "__main__":
     vt_model = vtgan(g_model_fine,g_model_coarse, d_model1, d_model2, image_shape_fine,image_shape_coarse,image_shape_x_coarse,label_shape_fine,label_shape_coarse)
     
     train(d_model1, d_model2,  g_model_coarse, g_model_fine, vt_model, dataset, n_epochs=args.epochs, 
-          n_batch=args.batch_size, savedir=args.savedir, n_patch=[args.n_patch,args.n_patch])
+          n_batch=args.batch_size, savedir=args.savedir, n_patch=[patch_size_fine,patch_size_coarse])
     
     
     end_time = time.time()
