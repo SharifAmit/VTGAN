@@ -50,5 +50,5 @@ if __name__ == "__main__":
     labels = to_categorical(labels)
     # save as compressed numpy array
     filename = args.outfile_name+'.npz'
-    savez_compressed(filename, src_images, tar_images. labels)
+    savez_compressed(filename, src_images, tar_images, labels)
     print('Saved dataset: ', filename)
