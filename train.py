@@ -193,13 +193,11 @@ if __name__ == "__main__":
     
     ncf=64
     nff=64
-    patch_size_fine= args.n_patch
-    patch_size_coarse= patch_size_fine//2
     # define discriminator models
-    d_model1 = vit_discriminator(image_shape_fine,label_shape_fine, image_size = 512,projection_dim=64, patch_size=patch_size_fine,
+    d_model1 = vit_discriminator(image_shape_fine,label_shape_fine, image_size = 512,projection_dim=64, patch_size=64,
                                  transformer_layers = 4, num_heads = 4, mlp_head_units = [128,64], activation='tanh', name='VT_fine')
 
-    d_model2 = vit_discriminator(image_shape_coarse,label_shape_coarse, image_size = 256, projection_dim=64, patch_size=patch_size_coarse,
+    d_model2 = vit_discriminator(image_shape_coarse,label_shape_coarse, image_size = 256, projection_dim=64, patch_size=32,
                                  transformer_layers = 4, num_heads = 4, mlp_head_units = [128,64], activation='tanh', name='VT_coarse') 
     
     # define generator models
@@ -218,7 +216,7 @@ if __name__ == "__main__":
     vt_model = vtgan(g_model_fine,g_model_coarse, d_model1, d_model2, image_shape_fine,image_shape_coarse,image_shape_x_coarse,label_shape_fine,label_shape_coarse)
     
     train(d_model1, d_model2,  g_model_coarse, g_model_fine, vt_model, dataset, n_epochs=args.epochs, 
-          n_batch=args.batch_size, savedir=args.savedir, n_patch=[patch_size_fine,patch_size_coarse])
+          n_batch=args.batch_size, savedir=args.savedir, n_patch=[args.n_patch,args.n_patch])
     
     
     end_time = time.time()
