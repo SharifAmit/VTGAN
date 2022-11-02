@@ -33,7 +33,7 @@ https://ieeexplore.ieee.org/document/9607858
 }
 ```
 
-## For Pytorch version please check the following repo
+## For Pytorch version please check the following repo. (Thanks to [Tinysqua](https://github.com/Tinysqua)).
 ```
 https://github.com/Tinysqua/VTGAN-pytorch-version
 ```
