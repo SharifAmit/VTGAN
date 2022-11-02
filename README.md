@@ -33,6 +33,10 @@ https://ieeexplore.ieee.org/document/9607858
 }
 ```
 
+## For Pytorch version please check the following repo
+```
+https://github.com/Tinysqua/VTGAN-pytorch-version
+```
 ## Pre-requisite
 - Ubuntu 18.04 / Windows 7 or later
 - NVIDIA Graphics card
